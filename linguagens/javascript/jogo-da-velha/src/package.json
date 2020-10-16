@@ -1,0 +1,16 @@
+{
+  "name": "jogo-da-velha",
+  "version": "1.0.0",
+  "description": "Jogo da velha usando HTML e Javascript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "author": "chinaglia.rafa@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "web-animations-js": "^2.3.2"
+  }
+}
