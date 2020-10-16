@@ -1,0 +1,129 @@
+body {
+  background: #212121;
+  color: #efefef;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#container {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background-color: #121212;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid {
+  width: 250px;
+  height: 8px;
+  background: tomato;
+  border-radius: 3px;
+  position: absolute;
+}
+
+#grid-h-t { top: 35%; left: 50%; transform: translate(-50%, -50%); }
+#grid-h-b { top: 65%; left: 50%; transform: translate(-50%, -50%); }
+#grid-v-l { top: 50%; left: 35%; transform: translate(-50%, -50%) rotate(90deg); }
+#grid-v-r { top: 50%; left: 65%; transform: translate(-50%, -50%) rotate(90deg); }
+
+.ripple {
+  border-radius: 50%;
+  width: 100vh;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  will-change: transform;
+  transform: translate(-50%, -50%) scale(0.0);
+}
+
+.turn-counter {
+  position: relative;
+  transform: translateY(-105px);
+  text-align: center;
+}
+
+.current-turn {
+  overflow: hidden;
+  width: 100%;
+  height: 38px;
+  position: relative;
+}
+
+.current-turn .spinner {
+  line-height: 40px;
+  position: absolute;
+  top: 0px;
+}
+
+.cyan {
+  color: cyan;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.flex-grid {
+  display: flex;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mark {
+  opacity: 0.0;
+  will-change: transform;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.0;
+  transition: opacity 0.2s ease-in;
+  display: none;
+}
+
+.dialog {
+  width: 280px;
+  height: 220px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  padding: 16px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  display: none;
+}
+
+.button {
+  display: block;
+  border: 3px solid #121212;
+  padding: 6px 12px;
+  margin: 12px auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.0em;
+  width: 230px;
+  line-height: 1.2em;
+  box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+}
+
+.color-orange {
+  background: orange;
+}

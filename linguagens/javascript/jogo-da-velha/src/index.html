@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="node_modules/web-animations-js/web-animations.min.js"></script>
+  <script src="jogo-da-velha.js"></script>
+  <link rel="stylesheet" href="jogo-da-velha.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Jogo da Velha</title>
+</head>
+<body class="theme theme--dark">
+  <div id="container">
+    <h1 class="turn-counter">Turno do
+      <div class="current-turn">
+        <div class="spinner">
+          <span class="cyan">círculo</span> <br />
+          <span class="yellow">triângulo</span>
+        </div>
+      </div>
+    </h1>
+    <div class="flex-grid">
+      <img onclick="select(0, 0, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(0, 1, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(0, 2, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(1, 0, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(1, 1, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(1, 2, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(2, 0, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(2, 1, this)" class="mark" src="" width="75" height="75" alt="">
+      <img onclick="select(2, 2, this)" class="mark" src="" width="75" height="75" alt="">
+    </div>
+    <div class="grid" id="grid-h-t"></div>
+    <div class="grid" id="grid-h-b"></div>
+    <div class="grid" id="grid-v-l"></div>
+    <div class="grid" id="grid-v-r"></div>
+  </div>
+  <div class="overlay">
+    <div class="dialog" id="dialog-tie">
+      Não há mais jogadas possíveis! O jogo acabou em empate.
+      <br />
+      <br />
+      <button onclick="location.reload()" class="button color-orange">JOGAR NOVAMENTE</button>
+    </div>
+    <div class="dialog" id="dialog-win">
+      Vitória do <span id="winner-target"></span>!
+      Cloque no botão abaixo para jogar novamente.
+      <br />
+      <button onclick="location.reload()" class="button color-orange">JOGAR NOVAMENTE</button>
+    </div>
+  </div>
+</body>
+</html>
